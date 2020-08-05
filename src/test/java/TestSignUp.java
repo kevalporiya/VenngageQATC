@@ -1,7 +1,7 @@
 public class TestSignUp {
 	
 	private Account account;
-	private SignUpPage signUpPage;
+	
 	public static WebDriver driver;
 	
 	@Before
