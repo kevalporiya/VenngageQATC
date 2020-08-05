@@ -1,6 +1,7 @@
-public class SignUpPage {
+public class SignUpPage extends TestSignUp {
 	
 	private Selenium selenium;
+	setUp();
 	
 	// Add XPaths here
 	WebElement firstname = driver.findElement(By.id("user_first_name"));
@@ -12,6 +13,8 @@ public class SignUpPage {
 	public SignUpPage(){
 		this.selenium = Selenium();
 	}
+	
+	
 	
 	// Create a function that takes an Account and simulates signing up using Selenium actions. (Refer to Selenium.java)
 	
