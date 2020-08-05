@@ -7,27 +7,26 @@ public class TestSignUp {
 	@Before
 	public void setUp(){
 		// Instantiate page objects here
-		System.setProperty("webdriver.chrome.driver", "C:\\Selenium_MyPractise\\TestFirmexKeval\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Selenium_MyPractise\\TestKeval\\chromedriver.exe");
 			driver = new ChromeDriver();
-		driver.get("https://venngage.com/templates/layouts");
-		
+		driver.get("https://venngage.com/templates/featured");
 	}
 	
 	@Test
 	public void testSignUp(){
 		// Write test steps here
 		
-		Actions a = new Actions(driver);
-		a.moveto
+		IndividualTemplatesPage obj = new IndividualTemplatesPage();
+		obj.clickOnSignUpButton();
 		
-		driver.findElement(By.id("user_first_name")).sendKeys("QA");
-		driver.findElement(By.id("user_last_name")).sendKeys("Test");
-		driver.findElement(By.id("user_email")).sendKeys("qa.123@venngage.com");
-		driver.findElement(By.id("user_password")).sendKeys("123456");
-		driver.findElement(By.id("btn_register")).click();
+		SignUpPage data = new SignUpPage();
+		data.signupbuttonclick();
 		
-		
-		
+		firstname.sendKeys(firstname);
+		lastname.sendKeys(lastname);
+		email.sendKeys(email);
+		password.sendKeys(password);
+		signup.click();					
 	}
 }
 
